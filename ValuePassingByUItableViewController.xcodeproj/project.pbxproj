@@ -9,21 +9,25 @@
 /* Begin PBXBuildFile section */
 		CF2E252826905DBD00CCC560 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF2E252726905DBD00CCC560 /* AppDelegate.swift */; };
 		CF2E252A26905DBD00CCC560 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF2E252926905DBD00CCC560 /* SceneDelegate.swift */; };
-		CF2E252C26905DBE00CCC560 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF2E252B26905DBD00CCC560 /* ViewController.swift */; };
 		CF2E252F26905DBE00CCC560 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF2E252D26905DBE00CCC560 /* Main.storyboard */; };
 		CF2E253126905DC000CCC560 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF2E253026905DC000CCC560 /* Assets.xcassets */; };
 		CF2E253426905DC000CCC560 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF2E253226905DC000CCC560 /* LaunchScreen.storyboard */; };
+		CF2E253C26905ECC00CCC560 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF2E253B26905ECC00CCC560 /* TableViewController.swift */; };
+		CF2E253E26905F9000CCC560 /* PassingValueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF2E253D26905F9000CCC560 /* PassingValueViewController.swift */; };
+		CF2E25402690613B00CCC560 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF2E253F2690613B00CCC560 /* TableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		CF2E252426905DBD00CCC560 /* ValuePassingByUItableViewController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ValuePassingByUItableViewController.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF2E252726905DBD00CCC560 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CF2E252926905DBD00CCC560 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		CF2E252B26905DBD00CCC560 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CF2E252E26905DBE00CCC560 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CF2E253026905DC000CCC560 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CF2E253326905DC000CCC560 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CF2E253526905DC000CCC560 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CF2E253B26905ECC00CCC560 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		CF2E253D26905F9000CCC560 /* PassingValueViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassingValueViewController.swift; sourceTree = "<group>"; };
+		CF2E253F2690613B00CCC560 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +62,9 @@
 			children = (
 				CF2E252726905DBD00CCC560 /* AppDelegate.swift */,
 				CF2E252926905DBD00CCC560 /* SceneDelegate.swift */,
-				CF2E252B26905DBD00CCC560 /* ViewController.swift */,
+				CF2E253B26905ECC00CCC560 /* TableViewController.swift */,
+				CF2E253D26905F9000CCC560 /* PassingValueViewController.swift */,
+				CF2E253F2690613B00CCC560 /* TableViewCell.swift */,
 				CF2E252D26905DBE00CCC560 /* Main.storyboard */,
 				CF2E253026905DC000CCC560 /* Assets.xcassets */,
 				CF2E253226905DC000CCC560 /* LaunchScreen.storyboard */,
@@ -137,8 +143,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CF2E252C26905DBE00CCC560 /* ViewController.swift in Sources */,
+				CF2E25402690613B00CCC560 /* TableViewCell.swift in Sources */,
+				CF2E253E26905F9000CCC560 /* PassingValueViewController.swift in Sources */,
 				CF2E252826905DBD00CCC560 /* AppDelegate.swift in Sources */,
+				CF2E253C26905ECC00CCC560 /* TableViewController.swift in Sources */,
 				CF2E252A26905DBD00CCC560 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -296,7 +304,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = cow.iwaski.ValuePassingByUItableViewController;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -315,7 +323,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = cow.iwaski.ValuePassingByUItableViewController;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

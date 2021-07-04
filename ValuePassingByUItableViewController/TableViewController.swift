@@ -7,7 +7,7 @@
 
 import UIKit
 
-class TableViewController: UITableViewController {
+class TableViewController: UITableViewController { //UITableViewControllerはクラスはViewControllerを継承してる
 
     
     override func viewDidLoad() {
@@ -34,17 +34,18 @@ class TableViewController: UITableViewController {
 
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        if let c = cell as? TableViewCell {
-            c.setup(butonTitle: "ボタン", valuText: "a") { (button, tf) in
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! TableViewCell
+       
+            cell.delegate = self //オブジェクト感の通知をすることができる
+            cell.setup(butonTitle: "ボタン", valuText: "a") { (button, tf) in
                 button.setTitle("button", for: .normal)
-                let vc = self.storyboard?.instantiateViewController(identifier: "vc") as! PassingValueViewController
-                vc.leble = tf.text ?? ""
-                self.present(vc, animated: true, completion: nil)
+//                let vc = self.storyboard?.instantiateViewController(identifier: "vc") as! PassingValueViewController
+//                vc.leble = tf.text ?? ""
+//                self.present(vc, animated: true, completion: nil)
 
             
             }
-        }
+        
 
         // Configure the cell...
 
